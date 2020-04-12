@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="br.com.infoprodutos.Produtos.controller.OrdemVenda">
+	<App>
+		<pages>
+			<Page title="Ordem de venda: {OrderID}" showNavButton="true" navButtonPress="onNavBack">
+			<content>
+			    <ObjectHeader xmlns="sap.m" title="Ordem: {OrderID}" number="{ parts: [{path:'UnitPrice'},''], type:'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }" numberUnit="BRL" id="header0" icon="sap-icon://customer-order-entry">
+			        <statuses>
+			            <ObjectStatus text="Desconto: {Discount}" state="Success" id="status0"/>
+			        </statuses>
+			        <attributes>
+			            <ObjectAttribute text="Quantidade: {Quantity}" id="attribute133"/>
+			            
+			        </attributes>
+			        </ObjectHeader>
+			    <IconTabBar selectedKey="__xmlview0--filter7" id="bar0">
+			        <items>
+			            <IconTabFilter text="Cliente" icon="sap-icon://task" id="filter7"/>
+			            <IconTabFilter text="Empregado" icon="sap-icon://shipping-status" iconColor="Positive" id="filter8"/>
+			            <IconTabFilter text="Transportadora" count="10" icon="sap-icon://task" iconColor="Critical" id="filter0"/></items>
+			    </IconTabBar>
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

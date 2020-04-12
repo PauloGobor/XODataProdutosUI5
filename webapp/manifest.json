@@ -112,6 +112,15 @@
 					"target": [
 						"Detalhes"
 					]
+				},
+				{
+					"name": "OrdemVenda",
+					"pattern": "ordem/{idOrder}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"OrdemVenda"
+					]
 				}
 			],
 			"targets": {
@@ -132,6 +141,13 @@
 				"Detalhes": {
 					"viewType": "XML",
 					"viewName": "Detalhes",
+					"controlAggregation": "pages",
+					"controlId": "app",
+					"viewPath": "br.com.infoprodutos.Produtos.view"
+				},
+				"OrdemVenda": {
+					"viewType": "XML",
+					"viewName": "OrdemVenda",
 					"controlAggregation": "pages",
 					"controlId": "app",
 					"viewPath": "br.com.infoprodutos.Produtos.view"

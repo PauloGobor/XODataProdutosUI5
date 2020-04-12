@@ -6,7 +6,7 @@
 				    <ObjectHeader xmlns="sap.m" number="{ parts: [{path:'UnitPrice'},''], type:'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }" numberUnit="BRL" id="header0" title="{ProductName}" intro="categoria: {Category/CategoryName}" icon="sap-icon://product">
 				        <statuses>
 				            <ObjectStatus text="{UnitsInStock}" state="{= ${UnitsInStock} &gt; 50 ? 'Warning' : 'None' }" id="status0"/>
-				            <ObjectStatus xmlns="sap.m"  text="{= ${Discontinued} ? 'Descontinuado' : 'Ativo' }" state="{= ${Discontinued} ? 'Error' : 'Success' }" id="status1"/>
+				            <ObjectStatus xmlns="sap.m" text="{= ${Discontinued} ? 'Descontinuado' : 'Ativo' }" state="{= ${Discontinued} ? 'Error' : 'Success' }" id="status1"/>
 				            </statuses>
 				        <attributes>
 				            <ObjectAttribute text="Qtde. por Unidade: {QuantityPerUnit}" id="attribute0"/>
@@ -15,7 +15,7 @@
 				        </ObjectHeader>
 				    <IconTabBar selectedKey="__filter1" id="bar0">
 				        <items>
-				            <IconTabFilter text="Fornecedor" count="10" icon="sap-icon://factory" iconColor="Negative" id="filter1">
+				            <IconTabFilter text="Fornecedor" icon="sap-icon://factory" iconColor="Negative" id="filter1">
 				            <content>
 				                <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="SFormFornecedor">
 				                    <sap.ui.layout.form:content>
@@ -33,11 +33,11 @@
 				                </sap.ui.layout.form:SimpleForm>
 				            </content>
 				            </IconTabFilter>
-				            <IconTabFilter text="Vendas" count="5" icon="sap-icon://sales-order-item" iconColor="Critical" id="filter2">
+				            <IconTabFilter text="Vendas" icon="sap-icon://sales-order-item" iconColor="Critical" id="filter2" count="cont">
 				                <content>
 				                    <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{Order_Details}" headerText="Ordens" inset="true">
 				                        <items>
-				                            <ColumnListItem type="Active" id="item0">
+				                            <ColumnListItem type="Active" id="item0" press="funcListItemOrderPress">
 				                                <cells>
 				                                    <Text text="{OrderID}" id="text2_1586184305113"/>
 				                                    <Text text="{UnitPrice}" id="text3_1586184305113"/>
